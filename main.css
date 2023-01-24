@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-brand img{
+    border-radius: 50%;
+}
+.navbar-nav .nav-item {
+    margin: 0 20px;
+}
+.navbar-nav {
+    justify-content: end;
+    width: 100%;
+}
+.section-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.section-title h3 {
+    color: #325346;
+}
+.section-title .line {
+    width: 150px;
+    border-radius: 10px;
+    height: 5px;
+    background: linear-gradient(to right,  #127450,  #3ad19a);
+}
+/* ==== home ==== */
+.home-wrapper{
+    min-height: 80vh;
+    position: relative;
+}
+.carousel-item img {
+    height: 400px;
+	padding-left:10px;
+}
+.title {
+    background: #0E4933;
+    color: #dcdcdc;
+    text-align: center;
+    width: 100%;
+    
+}
+.events-wrapper .row {
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+.events , .past-events {
+    min-height: 300px;
+    max-height: 400px;
+    overflow: scroll;
+    position: relative;
+}
+.events .title, .past-events .title {
+    position: sticky;
+    top: 0;
+}
+.events-wrapper p {
+    color: rgb(28, 28, 28);
+}
+
+
+
+/* Contact us page */
+.contact-us-content {
+    justify-content: space-between;
+}
+.contact-us-content .col .content {
+    background: #145d42;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px #00000015;
+}
+.contact-us-content .col {
+    padding: 10px;
+}   
+.contact-us-content .col i {
+    font-size: 20px;
+}
+
+
+/* Membership  */
+.memberships .content {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #0000002d;
+    color: white;
+    padding: 20px;
+}
+.membership1 .content {
+    background: linear-gradient(to right,  #096d48,  #3c8c6f);
+}
+.membership2 .content {
+    background: linear-gradient(to right,  #3c8c6f, #096d48);
+}

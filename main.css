@@ -105,3 +105,8 @@ body {
 .membership2 .content {
     background: linear-gradient(to right,  #3c8c6f, #096d48);
 }
+
+.responsive {
+  width: 100%;
+  height: auto;
+}

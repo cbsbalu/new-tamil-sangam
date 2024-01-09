@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;  
+}
+.header {
+    background-color:#f1f1f1;
+    padding: 15px;    
+    color:#006E2E;
+    border-left: 5px solid #006E2E;
+}
+.menu {
+    float: left;
+    width: 20%;    
+    height: 100%;
+    border-left: 5px solid #006E2E;
+}
+.menu-item {  
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: center;
+}
+.menu-logo {  
+    padding: 8px;
+    margin-top: 7px;  
+    text-align: center;
+}
+.menu-social {          
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: center;
+}
+.menu-footer {  
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: center;
+}
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.right {
+    float: left;
+    width: 20%;
+    //padding: 10px 15px;
+    margin-top: 7px;
+}
+.announcement {
+	padding: 10px 15px;
+	background-color: #C3D9FF;
+}
+.sponsor-listing {
+	padding: 10px 15px;	
+	border-bottom: 1px solid #f1f1f1;	
+	background-color: #F9F7ED;
+	margin-top: 7px;
+}
+.sponsors {
+	padding: 10px 15px;	
+}
+.footer {
+    background-color:#f1f1f1;
+    text-align:center;
+    padding:10px;
+    margin-top:7px;
+    font-size:14px;    
+}
+/**Elements to display image gallery in Gallery page**/
+#image-gallery { 
+    width: 600px; 
+    margin: 0 auto;
+}
+#current-image { 
+    width: 100%;
+} 
+#image-thumbs { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+}
+.thumb { 
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+    cursor: pointer;
+}
+/**
+Elements to display image thumbs in Home page
+Create four equal columns that sits next to each other
+**/
+.home-thumb { 
+    width: 200px; 
+    height: 140px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+    cursor: pointer;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+/* For tablets: */
+@media only screen and (max-width:800px) {    
+    .main {
+        width: 80%;
+        padding: 0;
+    }
+    .right {
+        width: 100%;
+    }
+	.column {
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+/* For mobile phones: */
+@media only screen and (max-width:500px) {    
+    .menu, .main, .right {
+        width: 100%;
+    }	
+	.menu-logo {
+		display: none;
+	}
+	.menu-social {
+		display: none;
+	}
+	.menu-footer {
+		display: none;
+	}	
+	#current-image { 
+		width: 70%;
+	}
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}

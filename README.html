@@ -37,6 +37,7 @@ th {
 
 <ul>
 <li><a href="#about">Overview</a></li>
+<li><a href="#announcement">How to update Announcement</a></li>
 <li><a href="#gallery">How to update Photo Gallery</a></li>
 <li><a href="#pastevents">How to update Album/Video link & Thumbnail image</a></li>
 <li><a href="#content">How to update Section Content</a></li>
@@ -81,13 +82,17 @@ th {
 <p>The website sections uses standard HTML tags to display text, links and images.</p>
 
 <ul>
-<li><code>&lt;h1&gt;</code> to <code>&lt;h5&gt;</code> for heading text</li>
-<li><code>&lt;p&gt;</code> for paragraphs</li>
-<li><code>&lt;ol&gt;/&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for ordered/unordered lists and list items</li>
-<li><code>&lt;a href="#" onclick="navigateTo(section-id);"&gt;...&lt;/a&gt;</code> for hyperlinks to internal sections of the website</li>
-<li><code>&lt;a href="https://www.abc.com"&gt;...&lt;/a&gt;</code> for hyperlinks to external websites</li>
+<li><code>&lt;h1&gt;</code> to <code>&lt;h5&gt;</code> for heading text.</li>
+<li><code>&lt;p&gt;</code> for paragraphs.</li>
+<li><code>&lt;ol&gt;/&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for ordered/unordered lists and list items.</li>
+<li><code>&lt;a href="#" onclick="navigateTo(section-id);"&gt;...&lt;/a&gt;</code> for hyperlinks to internal sections of the website.</li>
+<li><code>&lt;a href="https://www.abc.com"&gt;...&lt;/a&gt;</code> for hyperlinks to external websites.</li>
 <li><code>&lt;img src="..." width=".." style="..." /&gt;</code> with appropriate width, height and style parameters for images.</li>
 </ul>
+
+<h3>Announcement</h3>
+
+<p>A site wide Announcement can be displayed at the right area of the website. Announcement can include Heading and Description text and will be visible in the right area of the website on all pages when viewed in a Desktop/Tablet and on the bottom area when viewed in a Mobile device. </p>
 
 <h3>Photo Gallery</h3>
 
@@ -99,8 +104,8 @@ th {
 	<code>
 		&lt;div class="row"&gt;<br>
 		&nbsp;&nbsp;&lt;div class="column"&gt;<br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="ALBUM ADDRESS" target="_blank"&gt;<br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="THUMBNAIL ADDRESS" class="home-thumb" alt="EVENT DESCRIPTION"/&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="ALBUM URL" target="_blank"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="THUMBNAIL URL" class="home-thumb" alt="EVENT DESCRIPTION"/&gt;<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT DESCRIPTION<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
 		&nbsp;&nbsp;&lt;/div&gt;<br>
@@ -110,31 +115,46 @@ th {
 		&lt;div class="row"&gt;<br>
 	</code>
 
+<h2><a class="topic" name="announcement">How to update Announcement</a></h2>
+
+<p>The following are the instructions to include a new announcement:</p>
+
+<ol>
+<li>Take a backup of <code>index.html</code> and <code>index_ta.html</code>.</li>
+<li>Open <code>index.html</code> in a text editor and go to the DIV section with the following code: <code>&lt;div class="announcement"&gt;</code>. Delete the content inside this DIV area (untill the closing <code>&lt;/div&gt;</code>) and include your new Heading and Paragraph text. Use HTML tags <code>&lt;h2&gt;</code> for heading text and <code>&lt;p&gt;</code> for paragraph text. Save the file.</li>
+<li>Open <code>index_ta.html</code> and repeat the above step to include the Tamil translation (You can use <a href="https://translate.google.com/?sl=en&tl=ta&op=translate&hl=en" target="_new">Google Translate</a> to translate English content to Tamil). in the corresponding area of the file. Save the file.</li>
+<li>Preview <code>index.html</code> & <code>index_ta.html</code> pages in a browser and verify that the announcement appears fine.</li>
+</ol>
+
 <h2><a class="topic" name="gallery">How to update Photo Gallery</a></h2>
 
 <p>The Photo Gallery contains an image gallery feature. Refer to Photo Gallery in the <a href="#about">Overview</a> topic in this page to know more about this feature. The following are the instructions to update the Photo Gallery with new set of images.</p>
 
 <ol>
-<li>Delete the current images in the <code>gallery/</code> folder. Take a backup of <code>index.html</code>, <code>index_ta.html</code> and <code>scripts.js</code> files. </li>
+<li>Delete the current images in the <code>gallery/</code> folder. Take a backup of <code>index.html</code>, <code>index_ta.html</code> and <code>scripts.js</code> files.</li>
 <li>Upload new images to <code>gallery/</code> folder. Name the images as 1.jpeg, 2.jpeg etc..</li>			
-<li>Update <code>scripts.js</code> file <code>totalImages</code> variable in the <code>loadGallery()</code> function  with the total number of images in the <code>gallery/</code> folder. If you are using an image format other than <code>.jpeg</code>, update the <code>fileFormat</code> variable with the file extension you are using. </li>
-<li>Update the <code>index.html</code> and <code>index_ta.html</code> Photo Gallery section with appropriate Heading and Paragraph about the program. </li>
-<li>Preview the <code>index.html</code> & <code>index_ta.html</code> in a browser and go to Photo Gallery section and verify that the new images appear fine in both Thumbnail and enlarged view. </li>
+<li>Update <code>scripts.js</code> file <code>totalImages</code> variable in the <code>loadGallery()</code> function  with the total number of images in the <code>gallery/</code> folder. If you are using an image format other than <code>.jpeg</code>, update the <code>fileFormat</code> variable with the file extension you are using.</li>
+<li>Update the <code>index.html</code> and <code>index_ta.html</code> Photo Gallery section with appropriate Heading and Paragraph about the program.</li>
+<li>Preview the <code>index.html</code> & <code>index_ta.html</code> in a browser and go to Photo Gallery section and verify that the new images appear fine in both Thumbnail and enlarged view.</li>
 </ol>
 
 
 <h2><a class="topic" name="pastevents">How to update Photo Album/Video link & Thumbnail image</a></h2>
 
-<p>After a Tamil Sangam organized event, the <b>Past Events</b> in Home section can be updated with a link to a newly created Photo Album/Video following the steps below: </p>
+<p>After a Tamil Sangam organized event, the <b>Past Events</b> in Home section can be updated with a link to a newly created Photo Album/Video. In the table of Thumbnails, you will be doing the following:</p>
+<ul>
+<li>Insert a new Column at the beginning (This column will contain the code block of thumbnail image and link to the new Album/Video).</li>
+<li>Delete the last Column (This will be an old event that can be removed).</li>
+<li>Move a Column to next row (This is to adjust the table rows appropriately).</li>
+</ul>
 
+<b>Instructions: </b><br>
 <ol>
-<li>In the table of Thumbnails, you will need to 1. Insert a new Column at the beginning, 2. Delete the last Column and 3. Move a Column to next row.</li>
-<li>Login to Google Photos using newtamilsangam2021@gmail.com account</li>
-<li>Login to Google Photos using newtamilsangam2021@gmail.com account</li>
-<li>Create a new Album and upload the Photos</li>
-<li>Click the "Share" button from the album and copy the Address of the Album (to be used as ALBUM ADDRESS)</li>
-<li>Click on an individual photo you wish to use as Thumbnail and copy the Address (to be used as THUMBNAIL ADDRESS). Note: If this is a YouTube video you are linking, create a Thumbnail image using Microsoft Paint and upload to <code>/images</code> folder and use the same for THUMBNAIL ADDRESS. </li>
-<li>Construct a code block as below with your ALBUM ADDRESS, THUMBNAIL ADDRESS and an appropriate EVENT DESCRIPTION (for ALT tag and Caption displayed below the thumbnail):<br>
+<li>Login to Google Photos using the Sangam's email account.</li>
+<li>Create a new Album and upload the Photos.</li>
+<li>Click the "Share" button from the album and copy the Address of the Album (to be used as ALBUM ADDRESS).</li>
+<li>Click on an individual photo you wish to use as Thumbnail and copy the Address (to be used as THUMBNAIL ADDRESS). Note: If this is a YouTube video you are linking, create a Thumbnail image using Microsoft Paint and upload to <code>/images</code> folder and use the same for THUMBNAIL ADDRESS.</li>
+<li>Construct a code block as below:<br>
 		<code>
 		&nbsp;&lt;div class="column"&gt;<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="ALBUM ADDRESS" target="_blank"&gt;<br>
@@ -144,15 +164,14 @@ th {
 		&nbsp;&lt;/div&gt;
 		</code>
 </li>
-<li>Take a back up of <code>index.html</code> and <code>index_ta.html</code>. </li>
-<li>Open the <code>index.html</code> in a text editor and look for comments: <code>&lt;!--Photo Album/Video link & Thumbnail image--&gt;</code></li>
-<li>Insert your new code block you have created below <code>&lt;div class="row"&gt;</code>
-<li>Delete one Column code block in the last column</li>
-<li>Move one Column code block from first row to the second row</li>
-<li>Save <code>index.html</code> </li>
-<li>Repeat the same in <code>index_ta.html</code> with Tamil translation for the event description. </li>
-<li>Preview <code>index.html</code> and <code>index_ta.html</code> </li>
-<li>Repeat similar process to update the <b>Gallery</b> section <b>Past Events</b> area. Note that the Gallery section has two rows and three columns. So insert and delete code blocks accordingly. 
+<li>Take a back up of <code>index.html</code> and <code>index_ta.html</code>.</li>
+<li>Open the <code>index.html</code> in a text editor and look for comments: <code>&lt;!--Photo Album/Video link & Thumbnail image--&gt;</code>.</li>
+<li>Insert the new code block you have created below <code>&lt;div class="row"&gt;</code>.</li>
+<li>Delete the last Column code block of the table.</li>
+<li>Move one Column code block from first row to the second row of the table.</li>
+<li>Save <code>index.html</code>.</li>
+<li>Repeat the same in <code>index_ta.html</code> with Tamil translation for the event description.</li>
+<li>Preview <code>index.html</code> and <code>index_ta.html</code>.</li>
 </ol>
 
 <h2><a class="topic" name="content">How to update section content</a></h2>
@@ -161,9 +180,9 @@ th {
 
 <ol>
 <li>Take a backup of <code>index.html</code> and <code>index_ta.html</code>.</li>
-<li>Open <code>index.html</code> in a text editor and go to the DIV section you want to update and make changes within the sections DIV tag area. Save the file. </li>
-<li>Open <code>index_ta.html</code> in a text editor and include the Tamil translation (You can use <a href="https://translate.google.com/?sl=en&tl=ta&op=translate&hl=en" target="_new">Google Translate</a> to translate English content to Tamil) in the corresponding DIV tag area. Save the file. </li>
-<li>Preview <code>index.html</code> & <code>index_ta.html</code> pages in a browser and verify that the content appears fine. </li>
+<li>Open <code>index.html</code> in a text editor and go to the DIV section you want to update and make changes within the sections DIV tag area. Save the file.</li>
+<li>Open <code>index_ta.html</code> in a text editor and include the Tamil translation (You can use <a href="https://translate.google.com/?sl=en&tl=ta&op=translate&hl=en" target="_new">Google Translate</a> to translate English content to Tamil) in the corresponding DIV tag area. Save the file.</li>
+<li>Preview <code>index.html</code> & <code>index_ta.html</code> pages in a browser and verify that the content appears fine.</li>
 </ol>
 
 <p>To include a hyperlink in your content, use A HREF tag with a call to <code>navigateTo</code> function.<p>

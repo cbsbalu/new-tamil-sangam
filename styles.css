@@ -1,13 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Philosopher);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 * {
     box-sizing: border-box;  
 }
 .header {
     background-color:#f1f1f1;
-    padding: 15px;    
+	background-image: url('images/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-origin: content-box;		
+    padding: 15px;	
     color:#006E2E;
     border-left: 5px solid #006E2E;
+	height: 159px;
 }
 .menu {
+	background-image: url('images/leaf.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: left top;
     float: left;
     width: 20%;    
     height: 100%;
@@ -19,7 +31,7 @@
     border-bottom: 1px solid #f1f1f1;
     text-align: center;
 }
-.menu-logo {  
+.menu-logo {  	
     padding: 8px;
     margin-top: 7px;  
     text-align: center;
@@ -38,19 +50,22 @@
 }
 .main {
     float: left;
-    width: 60%;
-    padding: 0 20px;
-    overflow: hidden;
+    width: 60%;    
+	padding: 8px;
+    overflow: hidden;	
 }
 .right {
     float: left;
-    width: 20%;
-    //padding: 10px 15px;
+    width: 20%;    
     margin-top: 7px;
 }
 .announcement {
-	padding: 10px 15px;
-	background-color: #C3D9FF;
+	padding: 10px 15px;	
+	background-color: #EEEEEE;	
+	background-image: url('images/blue-leaf.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: contain;	
 }
 .sponsor-listing {
 	padding: 10px 15px;	
@@ -66,15 +81,23 @@
     text-align:center;
     padding:10px;
     margin-top:7px;
-    font-size:14px;    
+    font-size:14px;
+	border-left: 5px solid #006E2E;
 }
-/**Elements to display image gallery in Gallery page**/
+hr {
+	border: 2px solid #CDEB8B;
+}
+.rounded-corner {
+	border-radius: 25px;
+}
+/**Elements to display image gallery in Photo Gallery **/
 #image-gallery { 
     width: 600px; 
     margin: 0 auto;
 }
 #current-image { 
     width: 100%;
+	border-radius: 10px;
 } 
 #image-thumbs { 
     display: flex; 
@@ -87,17 +110,16 @@
     object-fit: cover; 
     margin-right: 10px; 
     cursor: pointer;
+	border-radius: 10px;
 }
-/**
-Elements to display image thumbs in Home page
-Create four equal columns that sits next to each other
-**/
+/** Elements to display image thumbs in Home page. Create four equal columns that sits next to each other **/
 .home-thumb { 
     width: 200px; 
     height: 140px; 
     object-fit: cover; 
     margin-right: 10px; 
     cursor: pointer;
+	border-radius: 10px;
 }
 .row {
   display: flex;
@@ -117,6 +139,14 @@ Create four equal columns that sits next to each other
 }
 /* For tablets: */
 @media only screen and (max-width:800px) {    
+	.header {
+		background-image: url('images/header-bg-small.png');
+		background-position: right bottom; 
+	}
+	.menu {
+		background-image: url('');
+		width: 100%;
+	}
     .main {
         width: 80%;
         padding: 0;
@@ -130,8 +160,16 @@ Create four equal columns that sits next to each other
 	}
 }
 /* For mobile phones: */
-@media only screen and (max-width:500px) {    
-    .menu, .main, .right {
+@media only screen and (max-width:500px) {
+	.header {		
+		background-image: url('');
+		height: 40%;
+	} 
+	.menu {
+		background-image: url('');
+		width: 100%;
+	}
+    .main, .right {
         width: 100%;
     }	
 	.menu-logo {

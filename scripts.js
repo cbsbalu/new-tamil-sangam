@@ -1,5 +1,5 @@
 function navigateTo(page) {
-    const pages = ["home","events","gallery","member","contact","directory"];
+    const pages = ["home","member","contact","directory"];
     //console.log(page);
     for (let i = 0; i < pages.length; i++) {
         if (page == pages[i]) {
@@ -7,10 +7,10 @@ function navigateTo(page) {
         } else {
             document.getElementById(pages[i]).style.display = "none";
         }
-    }                                
+    } 
 }
 function loadGallery() {    
-    var totalImages = 8;
+    var totalImages = 7;
     var fileFormat = ".jpeg";
     var imageThumbs = document.getElementById("image-thumbs");    
     var currentImage = document.getElementById("current-image");

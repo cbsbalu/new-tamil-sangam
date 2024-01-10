@@ -8,34 +8,31 @@ IMPORTANT: Read the instructions in the README.txt file before making changes.
 -->
 <script src="scripts.js"></script>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anek Tamil">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-    font-family:Exo, sans-serif ;    
+    font-family:Roboto, sans-serif;
 }
 </style>
 </head>
 <body onload="loadGallery();">
 <div class="header">        
-	<!--<a href="index_ta.html" style="font-family: Anek Tamil, sans-serif; top-margin:5px; float:right;">தமிழ்</a>-->
-    <!--<h2 style="font-family: Anek Tamil, sans-serif;">வடகிழக்கு விஸ்கான்சின் தமிழ்ச்சங்கம்</h2>-->
-    <h2 style="font-family: Philosopher, sans-serif;">Northeast Wisconsin Tamil Sangam</h2>  
+	<a href="index_ta.html" style="font-family: Anek Tamil, sans-serif; top-margin:5px; float:right;">தமிழ்</a>	
+	<br>
+	<span style="background-color:#f1f1f1; font-family: Anek Tamil, sans-serif; font-size:22px; font-weight:700;">வடகிழக்கு விஸ்கான்சின் தமிழ்ச்சங்கம்</span><br>
+	<span style="background-color:#f1f1f1; font-family: Philosopher, sans-serif; font-size:22px; font-weight:700;">Northeast Wisconsin Tamil Sangam</span>
 </div>
 
-<div style="overflow:auto"><!--body-container-->
-  <div class="menu">    
-        <div class="menu-item"><a href="#" onclick="navigateTo('home')">Home</a></div>
-        <div class="menu-item"><a href="#" onclick="navigateTo('events')">Events</a></div>
-        <div class="menu-item"><a href="#" onclick="navigateTo('gallery')">Gallery</a></div>
+<div style="overflow:auto"><!--body-container-->	
+  <div class="menu">    						
+		<div class="menu-item"><a href="#" onclick="navigateTo('home')">Home</a></div>        
 		<div class="menu-item"><a href="#" onclick="navigateTo('directory')">Directory</a></div>		
-        <div class="menu-item"><a href="#" onclick="navigateTo('member')">Membership</a></div>
-        <div class="menu-item"><a href="#" onclick="navigateTo('contact')">Contact Us</a></div>
-        <div class="menu-logo">            
-            <img src="images/logo.png" style="margin-top: 25px; margin-bottom: 25px; width:60%;">            
-        </div>
+		<div class="menu-item"><a href="#" onclick="navigateTo('member')">Membership</a></div>
+		<div class="menu-item"><a href="#" onclick="navigateTo('contact')">Contact Us</a></div>		
+		<div class="menu-logo"><b>Tamil Sangam of Green Bay & Fox Cities</b></div>		
+        <div class="menu-logo">			
+            <img src="images/logo.png" style="margin-top: 25px; margin-bottom: 25px; width:60%;">			
+        </div>		
         <div class="menu-social">            
             <i class="fa fa-whatsapp" aria-hidden="true">
                 <a href="https://chat.whatsapp.com/J0wNEiBtYGFCHqR7F6wKl5" target="_blank">WhatsApp</a>
@@ -50,114 +47,59 @@ body {
             </i>            
         </div>
         <div class="menu-footer">
-            Northeast Wisconsin Tamil Sangam is an Independent 501 c3 Corporation. All donations are tax-deductible.
-        </div>                            
+            Northeast Wisconsin Tamil Sangam is an Independent 501(c)(3) Corporation. All donations are tax-deductible.
+        </div>
   </div>
 
   <div class="main">
-    <div id="home" style="display:block;">
-        <!--HOME PAGE CONTENT GOES IN THIS DIV-->
-        <h2>Welcome to Northeast Wisconsin Tamil Sangam</h2>
-        
-		<p>Each vibrant generation of Tamils embraces the joyous responsibility of shaping the future of our community. The Northeast Wisconsin Tamil Community radiates enthusiasm, representing our shared commitment to this exciting journey ahead. We actively foster and energize our dynamic community through engaging outreach and spirited community planning.</p>
-
-		<div class="row">
-		  <div class="column">
-			<a href="https://youtu.be/QLw1Vvfvlhc?t=843" target="_blank">
-			<img src="images/thumb1.png" class="home-thumb" alt="Northeast Wisconsin Pongal Virtual Event 2023">			
-			Pongal Virtual Event 2023
-			</a>
-		  </div>
-		  <div class="column">
-			<a href="#" onclick="navigateTo('gallery')">
-			<img src="images/1.jpeg" class="home-thumb" alt="Inauguration and Entertainment Program 2022">			
-			Tamil Sangam Inauguration 2022
-			</a>
-		  </div>		  
-		  <div class="column">
-			<a href="https://youtu.be/5MhnMPAvhds" target="_blank">
-			<img src="images/thumb2.png" class="home-thumb" alt="Northeast Wisconsin Pongal Celebrations 2020">
-			Group Dance by VIPs at Pongal Celebrations 2020
-			</a>
-		  </div>
-		  <div class="column">
-			<a href="https://photos.app.goo.gl/eg8kJ57fjXBL2fGJ7" target="_blank">
-			<img src="images/thumb3.png" class="home-thumb" alt="Northeast Wisconsin Pongal Celebrations 2017">
-			Group Dance Performance at Pongal Celebrations 2017
-			</a>
-		  </div>		  
-		</div>	
-		        
-        <p>Are you ready to embark on an incredible journey of culture, connection, and camaraderie? Join the vibrant community at the Northeast Wisconsin Tamil Sangam, where we celebrate the richness of Tamil heritage and create lasting bonds among our members.</p>
-
-        <!--img src="images/1.jpeg" width="45%" style="float: right; padding-top: 25px; padding-bottom: 25px; padding-left: 25px;"/-->
-                
-        <h3>Why Join Us?</h3>
-
-        <ul>
-
-        <li><b>Cultural Celebrations: </b>Immerse yourself in the beauty of Tamil traditions through our festive cultural events, where dance, music, and art come together to create unforgettable experiences.</li>
-
-        <li><b>Community Engagement: </b>Be a part of a supportive and welcoming community that values diversity. Forge meaningful connections with fellow Tamils in Northeast Wisconsin and beyond.</li>
-
-        <li><b>Educational Initiatives: </b>Stay informed and enriched with our educational programs, workshops, and seminars that delve into various aspects of Tamil history, language, and contemporary issues.</li>
-
-        <li><b>Social Events: </b>Join in the fun at our social gatherings, picnics, and outings. Whether it's a casual meetup or an exciting event, you'll always find a warm and friendly atmosphere.</li>
-
-        <li><b>Philanthropy and Outreach: </b>Contribute to meaningful causes through our community outreach programs. Make a positive impact both locally and globally with the support of like-minded individuals.</li>
-
-        </ul>
-        
-        <p style="color: blue;"><b>Join us today and become a vital part of the Northeast Wisconsin Tamil Sangam! Together, let's celebrate our heritage, create lasting friendships, and build a stronger Tamil community in Northeast Wisconsin.</b><p>
-				
-    </div><!--home-->
-
-    <div id="events" style="display:none;">
-        <!--EVENTS PAGE CONTENT GOES IN THIS DIV-->
-        <h2>Events</h2>
-                            
-        <img src="images/Banner.png" width="75%"/>
+    <div id="home" style="text-align: left; display:block;">
+        <!--HOME SECTION CONTENT STARTS HERE-->
+       	
+		<!--h2>Welcome to Northeast Wisconsin Tamil Sangam</h2-->
+		
+		<img src="images/Banner.png" width="100%"/>
         
         <p>Northeast Wisconsin's much-awaited Pongal Celebration event is planned for 3rd February 2024 as an In-Person event. </p>				
         <b>Date & Time:  3rd February 2024 (Saturday) from 4pm to 10pm</b><br>
         <b>Venue: Menasha High School Auditorium, 420 7th St, Menasha, WI 54952</b><br>
         <br>
-        Admission:
-        <ul> 
-        <li>General: 20$</li>
-        <li>Child (3 to 12 years): 10$</li>
-        </ul>
+        <b>Admission:</b><br>
+		<ul>
+		<li>General: 20$</li>
+		<li>Child (3 to 12 years): 10$</li>
+		</ul>
 
         <p>The event is planned to start at 4pm with snacks and appetizers. The cultural program will begin at 5pm. Please mark your calendar, join the fun with your friends & family for a memorable celebration. Stay tuned for further communication.</p>
         
         <p>If you wish to participate in the cultural events, Please enroll before Friday, 12th January by contacting our cultural coordinators Arun Kumar Loganathan (Email: jp.arun85@gmail.com, Phone: 920-544-2997) or Swaminathan Balakrishnan (Email: swaminathan.ba@gmail.com, Phone: 920-843-8645) with the following information:</p> 
         <ul>
-        <li>Who is going to perform – Contact name, phone number, email</li>
-        <li>What is your performance – Dance/Singing/Speech/Recital/anything else</li>
-        <li>Is it a Team performance or an individual performance – If it is a team, then the team name</li>
-        <li>Total Duration – approximate total time of your performance</li>
+        <li>Who is going to perform - Contact name, phone number, email</li>
+        <li>What is your performance - Dance/Singing/Speech/Recital/anything else</li>
+        <li>Is it a Team performance or an individual performance - If it is a team, then the team name</li>
+        <li>Total Duration - approximate total time of your performance</li>
         </ul>
         
         <p>This upcoming event is organized by the Northeast Wisconsin Tamil Sangam (NEW Tamil Sangam) in collaboration with Indian and South Asian community members. Our goal has always been to bring our communities together, provide a platform to showcase everyone's talents and kids' performances. We are hoping that you will continue your support for this effort to keep our community engaged and working together.</p> 
-    
-    </div><!--events-->
-
-    <div id="gallery" style="display:none;">
-		<!--GALLERY PAGE CONTENT GOES IN THIS DIV-->
-        <h2>Gallery</h2>        
+		
+		<hr>
+				
+		<h2>Photo Gallery</h2>
+        
         <h3>Northeast Wisconsin Tamil Sangam Inauguration - Friday, 3rd June 2022</h3>
-        <p>Program included Sangam Inauguration, Introduction of Office Bearers, Cultural Events & Entertainment program by Celebrity RJ/VJ/Mimicry Artist 'Konjam Nadinga Boss' fame Aadhavan. Event was held at Brown County Central Library, Green Bay at 5:00 pm.</p>
+        <p>Event was held at Brown County Central Library, Green Bay at 5:00 pm and included Sangam Inauguration, Introduction of Office Bearers, Cultural Events & Entertainment program by Celebrity RJ/VJ/Mimicry Artist 'Konjam Nadinga Boss' fame Aadhavan. </p>
+		
         <div id="image-gallery">
             <img id="current-image" src="gallery/1.jpeg" alt="Image 1">
             <div id="image-thumbs"></div>
         </div>
-
+				
         <h3>Past Events</h3>                
 		
+		<!--Photo Album/Video link & Thumbnail image-->
 		<div class="row">
 		  <div class="column">
-			<a href="https://youtu.be/QLw1Vvfvlhc?t=843" target="_blank">
-			<img src="images/thumb4.png" class="home-thumb" alt="Northeast Wisconsin Pongal Virtual Event 2023">			
+			<a href="https://youtu.be/QLw1Vvfvlhc?t=843" target="_blank">			
+			<img src="images/thumb1.png" class="home-thumb" alt="Northeast Wisconsin Pongal Virtual Event 2023">			
 			Pongal Virtual Event 2023 (YoutTube Video)
 			</a>
 		  </div>		  
@@ -168,13 +110,25 @@ body {
 			</a>
 		  </div>
 		  <div class="column">
+			<a href="https://youtu.be/g-8F17ikoSs?si=uT9DjqmLTfkFZzUE" target="_blank">
+			<img src="images/fancy-dress-thumb.png" class="home-thumb" alt="Fancy Dress by Appleton Kids at 2020 Pongal Celebration">			
+			Fancy Dress by Appleton Kids at 2020 Pongal Celebration (YoutTube Video)
+			</a>
+		  </div>
+		  <div class="column"><!--UPDATE-->
+			<a href="https://youtu.be/-QtZ5OKn0xc?si=x0kO10VG2O-VXNNF" target="_blank">
+			<img src="images/metro-singari-thumb.png" class="home-thumb" alt="Metro Singaris Group Dance at 2020 Pongal Celebration">
+			Metro Singaris Group Dance at 2020 Pongal Celebration (YouTube Video)
+			</a>
+		  </div>		
+		</div>
+		<div class="row">
+		  <div class="column">
 			<a href="https://photos.app.goo.gl/eg8kJ57fjXBL2fGJ7" target="_blank">
 			<img src="https://lh3.googleusercontent.com/pw/ABLVV86hi7rRNUkf5hCrNCB39Qpp3kpZRFexcnuq8KyF9anEmz4zGOquUH4GfqfYAXfJVcteFZxbw5_ZRsHpsjSJV3H3EG9H6fcb5rl5wXgxKH_Xi1vMtMPDHk3dIM2g6FW-tX0yvHHHULmToABBOnX2YMPGJA=w1444-h963-s-no-gm?authuser=0" class="home-thumb" alt="Northeast Wisconsin Pongal Celebrations 2017">
 			Pongal Celebrations 2017 (Google Photo Album)
 			</a>
-		  </div>		  
-		</div>
-		<div class="row">
+		  </div>
 		  <div class="column">
 			<a href="https://photos.app.goo.gl/CXN7M7GTg4XUNvt68" target="_blank">
 			<img src="https://lh3.googleusercontent.com/pw/ABLVV85d3KG_mzoTbBkGvUx-Jb_6UaDb556Z4ANQkKJ3z0OA8saTSvXKekw7cl-qNNE6wNgGFZn3gdhX437jLZvNfmBmEhsr9ndb14zwrhvDWZiqzn2KupJUKYQPX_NEVFJWCNDvAGYes4Di8kPdkeEzOjD2Kw=w1445-h963-s-no-gm?authuser=0" class="home-thumb" alt="Northeast Wisconsin Pongal Celebrations 2016">
@@ -192,18 +146,46 @@ body {
 			<img src="https://lh3.googleusercontent.com/pw/ABLVV86oFcm14Xak5iY7AGYkPBFwTEqXW-icDXI4d2bxAqAildWUVZ-Or4ztpvz9CqO__6pGfXmYnfMVYdreT2zU18JDwhqqEEQQZF0tpIL27yAX-QruJ-4EqfM7SbtQBxCyqQW7swejRoHHWLqHH8wsqzYtbQ=w1284-h963-s-no-gm?authuser=0" class="home-thumb" alt="Northeast Wisconsin Pongal Celebrations 2011">
 			Pongalo Pongal 2007 (Google Photo Album)
 			</a>
-		  </div>
+		  </div>		  
 		</div>
+		    
+		<br><hr><br>
         
+		<p>Each vibrant generation of Tamils embraces the joyous responsibility of shaping the future of our community. The Northeast Wisconsin Tamil Community radiates enthusiasm, representing our shared commitment to this exciting journey ahead. We actively foster and energize our dynamic community through engaging outreach and spirited community planning.</p>
+		
+             
+        <h3>Why Join Us?</h3>
+
+        <ul>
+
+        <li><b>Cultural Celebrations: </b>Immerse yourself in the beauty of Tamil traditions through our festive cultural events, where dance, music, and art come together to create unforgettable experiences.</li>
+
+        <li><b>Community Engagement: </b>Be a part of a supportive and welcoming community that values diversity. Forge meaningful connections with fellow Tamils in Northeast Wisconsin and beyond.</li>
+
+        <li><b>Educational Initiatives: </b>Stay informed and enriched with our educational programs, workshops, and seminars that delve into various aspects of Tamil history, language, and contemporary issues.</li>
+
+        <li><b>Social Events: </b>Join in the fun at our social gatherings, picnics, and outings. Whether it's a casual meetup or an exciting event, you'll always find a warm and friendly atmosphere.</li>
+
+        <li><b>Philanthropy and Outreach: </b>Contribute to meaningful causes through our community outreach programs. Make a positive impact both locally and globally with the support of like-minded individuals.</li>
+
+        </ul>
+        
+        <p style="color: blue;"><b>Join us today and become a vital part of the Northeast Wisconsin Tamil Sangam! Together, let's celebrate our heritage, create lasting friendships, and build a stronger Tamil community in Northeast Wisconsin.</b><p>
+		
 		<br>
 		
-    </div><!--gallery-->
-
+		<!--HOME SECTION CONTENT ENDS HERE-->
+		
+    </div><!--home-->
+    
     <div id="member" style="display:none;">
-		<!--MEMBERSHIP PAGE CONTENT GOES IN THIS DIV-->
-        <h2>Membership</h2>
+		<!--MEMBERSHIP SECTION CONTENT STARTS HERE-->
+        
+		<h2>Membership</h2>
+		
+		<p>Are you ready to embark on an incredible journey of culture, connection, and camaraderie? Join the vibrant community at the Northeast Wisconsin Tamil Sangam, where we celebrate the richness of Tamil heritage and create lasting bonds among our members.</p>
 
-		<h3>Benefits:</h3>
+		<h3>Benefits</h3>
 
         <ul>
         <li>Exclusive access to cultural events and performances.</li>
@@ -212,7 +194,7 @@ body {
         <li>Regular updates on upcoming activities and initiatives.</li>
         </ul>
 		
-		<h3>How to Join:</h3>
+		<h3>How to Join</h3>
 
         <p>Becoming a member of the Northeast Wisconsin Tamil Sangam is easy! Simply contact our <a href="#" onclick="navigateTo('contact');">team members</a> and they will guide you. You can find Membersip Fee and other details below. Your journey into a vibrant Northeast Wisconsin Tamil community starts here.</p>
                
@@ -251,15 +233,18 @@ body {
             </li>
         </ol>
         
+		<!--MEMBERSHIP SECTION CONTENT ENDS HERE-->
+		
     </div><!--member-->
 
-    <div id="contact" style="display:none;">
-		<!--CONTACT PAGE CONTENT GOES IN THIS DIV-->
+    <div id="contact" style="display:none;">		
+		<!--CONTACT US SECTION CONTENT STARTS HERE-->
+		
         <h2>Contact Us</h2>
                 
         <p>Stay connected with the Northeast Wisconsin Tamil Sangam through our social media channels. Follow us on our channels to get the latest updates, event highlights, and connect with fellow members.</p>
 		
-			<h2>Our Social Media Channels:</h2>
+			<h2>Our Social Media Channels</h2>
 			<ul>
 				<li><a href="https://chat.whatsapp.com/J0wNEiBtYGFCHqR7F6wKl5" target="_blank">WhatsApp</a></li>
 				<li><a href="https://www.facebook.com/groups/newtamilsangam" target="_blank">Facebook</a></li>
@@ -268,12 +253,12 @@ body {
 		
 		<p>To request more information, you can email us or reach out to one of the following office bearers.</p>
 		
-			<h2>Email:</h2>
+			<h2>Email</h2>
 			<ul>
 				<li><a href="mailto:newtamilsangam2021@gmail.com">newtamilsangam2021@gmail.com</a></li>
 			</ul>
 
-			<h2>Office Bearers:</h2>
+			<h2>Office Bearers</h2>
 			<ul>
 				<li>
 				<b>Pandian Periasamy</b>,President, Phone: 920-265-6891
@@ -292,9 +277,12 @@ body {
 				</li>
 			</ul>
 			
+			<!--CONTACT US SECTION CONTENT ENDS HERE-->
     </div><!--contact-->
 	
 	<div id="directory" style="display:none;">
+		<!--DIRECTORY SECTION CONTENT STARTS HERE-->
+		
 		<h2>Business Directory</h2>
 					
 		<!--h3>Navam Collections</h3>
@@ -309,7 +297,8 @@ body {
 		<li>Sentence less than 40 words (260 characters) describing your business</li>
 		<li>Website or Street Address </li>
 		</ol>
-		 
+		
+		<!--DIRECTORY SECTION CONTENT STARTS HERE-->		
 	</div><!--directory-->
 	
   </div><!--main-->
@@ -341,9 +330,8 @@ body {
 </div><!--body-container-->
 
 <div class="footer">    
-    © 2024 Northeast Wisconsin Tamil Sangam - All Rights Reserved.
+    &copy 2024 Northeast Wisconsin Tamil Sangam - All Rights Reserved.
 </div>
 
 </body>
 </html>
-

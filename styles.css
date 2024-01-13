@@ -2,190 +2,322 @@
 @import url(https://fonts.googleapis.com/css?family=Philosopher);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 * {
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 .header {
     background-color:#f1f1f1;
-	background-image: url('images/header-bg.png');
-	background-repeat: no-repeat;
-	background-position: right center;
-	background-origin: content-box;		
-    padding: 15px;	
-    color:#006E2E;
-    border-left: 5px solid #006E2E;
-	height: 159px;
+	background-image:url('images/wh-pattern.png');
+	background-repeat:repeat;
+	border-left:5px solid #006E2E;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	color:#006E2E;		
+}
+.header-bg {
+	background-image:url('images/header-bg.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+	background-origin:content-box;
+	height:159px;
+    padding:15px;
+}
+.title-ta {
+	background-color:#f1f1f1;
+	font-family:Anek Tamil, sans-serif;
+	font-size:20px;
+	font-weight:700;
+}
+.title-en {
+	background-color:#f1f1f1;
+	font-family:Philosopher, sans-serif;
+	font-size:24px; 
+	font-weight:700;
 }
 .menu {
-	background-image: url('images/leaf.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: left top;
-    float: left;
-    width: 20%;    
-    height: 100%;
-    //border-left: 5px solid #006E2E;
+	background-image:url('images/leaf.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:left top;
+	border-bottom-left-radius: 25px;
+    float:left;
+    width:20%;  
+    height:100%;
 }
-.menu-item {  
-    padding: 8px;
-    margin-top: 7px;
-    border-bottom: 1px solid #f1f1f1;
-    text-align: center;
+.menu-item {
+    padding:8px;
+    margin-top:7px;
+    border-bottom:1px solid #f1f1f1;
+    text-align:center;
 }
-.menu-logo {  	
-    padding: 8px;
-    margin-top: 7px;  
-    text-align: center;
+.menu-logo {
+    padding:8px;
+    margin-top:7px;
+    text-align:center;
 }
-.menu-social {          
-    padding: 8px;
-    margin-top: 7px;
-    border-bottom: 1px solid #f1f1f1;
-    text-align: center;
+.menu-social {  
+    padding:8px;
+    margin-top:7px;
+    border-bottom:1px solid #f1f1f1;
+    text-align:center;
 }
-.menu-footer {  
-    padding: 8px;
-    margin-top: 7px;
-    border-bottom: 1px solid #f1f1f1;
-    text-align: center;
+.menu-footer {
+    padding:8px;
+    margin-top:7px;
+    border-bottom:1px solid #f1f1f1;
+	border-bottom-left-radius: 25px;
+    text-align:center;
 }
 .main {
-    float: left;
-    width: 60%;    
-	padding: 8px;
-    overflow: hidden;	
+    float:left;
+    width:60%;
+	padding:8px;
+    overflow:hidden;
 }
 .right {
-    float: left;
-    width: 20%;    
-    margin-top: 7px;
+    float:left;
+    width:20%;
+    margin-top:7px;
 }
 .announcement {
-	padding: 10px 15px;	
-	background-color: #EEEEEE;	
-	background-image: url('images/blue-leaf.png');
-	background-repeat: no-repeat;
-	background-position: right top;
-	background-size: contain;	
+	border-radius:25px;
+	padding:10px 15px;
+	background-color:#EEEEEE;
+	background-image:url('images/blue-leaf.png');
+	background-repeat:no-repeat;
+	background-position:right top;
+	background-size:contain;
 }
 .sponsor-listing {
-	padding: 10px 15px;	
-	border-bottom: 1px solid #f1f1f1;	
-	background-color: #F9F7ED;
-	margin-top: 7px;
+	padding:10px 15px;
+	border-radius:25px;	
+	border-bottom:5px solid #f1f1f1;	
+	margin-top:7px;
+	color: #465945;
+	font-family:Roboto, sans-serif;
+	font-size: medium;
+	font-weight: lighter;
 }
 .sponsors {
-	padding: 10px 15px;	
+	padding:10px 15px;
 }
 .footer {
-    background-color:#f1f1f1;
+    background-color:#f1f1f1;	
+	border-radius:25px;
     text-align:center;
     padding:10px;
     margin-top:7px;
     font-size:14px;
-	border-left: 5px solid #006E2E;
-}
-hr {
-	border: 2px solid #CDEB8B;
+	border-left:5px solid #006E2E;
 }
 .rounded-corner {
-	border-radius: 25px;
+	border-radius:25px;
+}
+.iframe-dir {
+	width:100%; 
+	height:800px;
+	border:0;
+}
+.iframe-form {
+	width:100%; 
+	height:450px;
+	border:0;
+}
+table {
+	width: 75%;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+th {
+	background-color:#eeeeee;
+	border: 1px solid;
+	padding: 10px;
+	font-size: medium;
+	font-weight: bold;
+}
+td {
+	border: 1px solid;
+	padding: 10px;
+	text-align: left;
+	vertical-align: top;
+}
+hr {
+	border:3px solid #006E2E;
+	border-radius:25px;
 }
 /**Elements to display image gallery in Photo Gallery **/
 #image-gallery { 
-    width: 600px; 
-    margin: 0 auto;
+    width:600px;
+    margin:0 auto;
 }
-#current-image { 
-    width: 100%;
-	border-radius: 10px;
-} 
-#image-thumbs { 
-    display: flex; 
-    justify-content: center; 
-    margin-top: 20px;
+#current-image {
+    width:100%;
+	border-radius:10px;
 }
-.thumb { 
-    width: 80px; 
-    height: 80px; 
-    object-fit: cover; 
-    margin-right: 10px; 
-    cursor: pointer;
-	border-radius: 10px;
+#image-thumbs {
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
 }
-/** Elements to display image thumbs in Home page. Create four equal columns that sits next to each other **/
-.home-thumb { 
-    width: 200px; 
-    height: 140px; 
-    object-fit: cover; 
-    margin-right: 10px; 
-    cursor: pointer;
-	border-radius: 10px;
+.thumb {
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    margin-right:10px; 
+    cursor:pointer;
+	border-radius:10px;
+}
+/** Elements to display image thumbs with rounded corner, Table with row and column **/
+.home-thumb {
+    width:200px;
+    height:140px;
+    object-fit:cover;
+    margin-right:10px;
+    cursor:pointer;
+	border-radius:10px;
 }
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+  display:flex;
+  flex-wrap:wrap;
+  padding:0 4px;
 }
-
 .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  flex:25%;
+  max-width:25%;
+  padding:0 4px;
 }
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
+  margin-top:8px;
+  vertical-align:middle;
+  width:100%;
+}
+/** Elements for mobile menu, Hamburger bars **/
+#mob-menu {
+	display:none;
+	z-index:2;
+}
+#mob-menu-bar {
+	display:none;
+	width:45px;
+	height:40px;
+	margin:30px 0 20px 20px;
+	cursor:pointer;
+}
+.bar {
+  height: 5px;
   width: 100%;
+  background-color: #006E2E;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+#bar1 {
+	transform:translateY(-4px);
+}
+#bar3 {
+	transform:translateY(4px);
+}
+.nav {
+	transition:0.3s ease;
+	display:none;
+}
+.nav ul {
+	padding:0 22px;
+}
+.nav li {
+	list-style:none;
+	padding:12px 0;
+}
+.nav li a {
+	color:white;
+	font-size:20px;
+	text-decoration:none;
+}
+.nav li a:hover {
+	font-weight:bold;
+}
+.menu-bg, #mob-menu {
+	top:0;
+	left:0;
+	position:absolute;
+}
+.menu-bg {
+	z-index:1;
+	width:0;
+	height:0;
+	margin:30px 0 20px 20px;
+	background:radial-gradient(circle, #006E2E, #006E2E);
+	border-radius:50%;
+	transition:0.3s ease;
+}
+.change {
+	display:block;
+}
+.change .bar {
+	background-color:white;
+}
+.change #bar1 {
+	transform:translateY(4px) rotateZ(-45deg);
+}
+.change #bar2 {
+	opacity:0;
+}
+.change #bar3 {
+	transform:translateY(-6px) rotateZ(45deg);
+}
+.change-bg {
+	//width:520px;
+	//height:460px;
+	width:520px;
+	height:520px;
+	transform:translate(-60%,-30%);
 }
 /* For tablets: */
-@media only screen and (max-width:800px) {    
-	.header {
-		background-image: url('images/header-bg-small.png');
-		background-position: right bottom; 
+@media only screen and (max-width:800px) {
+	.header-bg {
+		background-image:url('images/header-bg-small.png');
+		background-position:right bottom;
 	}
 	.menu {
-		background-image: url('');
-		width: 100%;
+		background-image:url('');		
 	}
     .main {
-        width: 80%;
-        padding: 0;
+        width:80%;
+        padding:0;
     }
     .right {
-        width: 100%;
+        width:100%;
     }
 	.column {
-		flex: 50%;
-		max-width: 50%;
+		flex:50%;
+		max-width:50%;
 	}
 }
 /* For mobile phones: */
 @media only screen and (max-width:500px) {
-	.header {		
-		background-image: url('');
-		height: 40%;
-	} 
-	.menu {
-		background-image: url('');
-		width: 100%;
+	.header-bg {
+		background-image:url('');
+		height:20%;
+	}
+	.title-en {
+		font-size:20px; 
+		font-weight:600;
+	}	
+	.title-ta, .menu {
+		display:none;
 	}
     .main, .right {
-        width: 100%;
-    }	
-	.menu-logo {
-		display: none;
-	}
-	.menu-social {
-		display: none;
-	}
-	.menu-footer {
-		display: none;
-	}	
-	#current-image { 
-		width: 70%;
-	}
+        width:100%;
+		padding:8px;
+    }
 	.column {
-		flex: 100%;
-		max-width: 100%;
+		flex:100%;
+		max-width:100%;
+	}
+	#current-image { 
+		width:66%;
+	}	
+	#mob-menu, #mob-menu-bar {
+		display:block;
 	}
 }

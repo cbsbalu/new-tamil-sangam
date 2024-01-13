@@ -1,5 +1,8 @@
-function navigateTo(page) {
-    const pages = ["home","member","contact","directory"];
+/**
+Shows and hides div sections
+**/
+function navigateTo(device, page) {
+    const pages = ["home","member","sponsor","contact","directory"];
     //console.log(page);
     for (let i = 0; i < pages.length; i++) {
         if (page == pages[i]) {
@@ -7,8 +10,14 @@ function navigateTo(page) {
         } else {
             document.getElementById(pages[i]).style.display = "none";
         }
-    } 
+    }
+	if (device == "mobile") {
+		menuOnClick();		
+	}		
 }
+/**
+Loads images from folder into thumbnails and displays the clicked image enlarged 
+**/
 function loadGallery() {    
     var totalImages = 7;
     var fileFormat = ".jpeg";
@@ -26,4 +35,12 @@ function loadGallery() {
             }
         );
     }
+}
+/**
+Handles menu click for mobile device
+**/
+function menuOnClick() {	
+	document.getElementById("mob-menu-bar").classList.toggle("change");
+	document.getElementById("nav").classList.toggle("change");
+	document.getElementById("menu-bg").classList.toggle("change-bg");
 }

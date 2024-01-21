@@ -51,7 +51,17 @@
 				<li><a href="#" onclick="navigateTo('mobile', 'directory');">Directory</a></li>
 				<li><a href="#" onclick="navigateTo('mobile', 'member');">Join Now</a></li>
 				<li><a href="#" onclick="navigateTo('mobile', 'sponsor');">Sponsor</a></li>
-				<li><a href="#" onclick="navigateTo('mobile', 'contact');">Contact</a></li>				
+				<li><a href="#" onclick="navigateTo('mobile', 'contact');">Contact</a></li>
+				<li>
+					<div class="mob-experience">
+						<img id="lang" src="images/icons/tamil.svg" class="top-align"/>
+						<a href="index_ta.html" style="font-family: Anek Tamil, sans-serif;">தமிழ்</a>
+					</div>
+					<div class="mob-experience">
+						<img id="mob-light" src="images/icons/night.svg" class="top-align"/>
+						<a href="#" onclick="lights(this,'mobile','en');">Night</a>
+					</div>
+				</li>			
 				<li>
 					<a href="https://chat.whatsapp.com/J0wNEiBtYGFCHqR7F6wKl5" target="_blank">
 						<img src="images/icons/whatsapp.png" class="social-icons" />
@@ -74,11 +84,13 @@
 			<span class="title-en">Northeast Wisconsin Tamil Sangam</span>
 			<div class="experiences">				
 				<img id="lang" src="images/icons/tamil.svg" class="top-align"/>
-				<a href="index_ta.html" style="font-family: Anek Tamil, sans-serif;">தமிழ்</a>&nbsp;
+				<a href="index_ta.html" style="font-family: Anek Tamil, sans-serif;">தமிழ்</a>&nbsp;|&nbsp;
 				<img id="door" src="images/icons/outdoor.svg" class="top-align"/>
-				<a href="#" onclick="outDoors(this,'all','en');">Outdoor</a>&nbsp;
+				<a href="#" onclick="outDoors(this,'all','en');">Outdoor</a>&nbsp;|&nbsp;
 				<img id="light" src="images/icons/night.svg" class="top-align"/>
-				<a href="#" onclick="lights(this,'all','en');">Night</a>
+				<a href="#" onclick="lights(this,'all','en');">Night</a><!--&nbsp;|&nbsp;
+				img id="wide" src="images/icons/wide.svg" class="top-align"/>
+				<a href="#" onclick="gowide(this,'all','en');">Movie</a-->
 			</div>
 		</div>
 	</div>
@@ -406,9 +418,16 @@
 	</div><!--body-container-->
 
 	<div class="footer">
-		&copy 2024 Northeast Wisconsin Tamil Sangam - All Rights Reserved<br />
-		Background & event photography by: <a href="https://thecuriouseye.net/" target="#_new">PGSDEEPAKIMAGES</a><br>
-		Website crafted by: <a href="https://www.onwardpath.com" target="#_new">Onwardpath</a>
+		<span class="opaque">
+			&copy 2024 Northeast Wisconsin Tamil Sangam - All Rights Reserved
+		</span><br />
+		<span class="opaque">
+			Background & event photography by <a href="https://thecuriouseye.net/" target="#_new">PGS Deepak IMAGES</a>
+		</span><br>
+		<span class="opaque">
+			Website crafted by <a href="https://www.onwardpath.com" target="#_new">Onwardpath</a>
+		</span>
+		</span>
 	</div>
 	
 	<!-- Sticky Floating elements -->	

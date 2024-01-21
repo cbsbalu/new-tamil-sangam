@@ -54,6 +54,16 @@
 				<li><a href="#" onclick="navigateTo('mobile', 'sponsor');">ஆதரவாளர்</a></li>
 				<li><a href="#" onclick="navigateTo('mobile', 'contact');">தொடர்பு</a></li>
 				<li>
+					<div class="mob-experience">
+						<img src="images/icons/eng.svg" class="top-align"/>
+						<a href="index.html">English</a>
+					</div>
+					<div class="mob-experience">
+						<img id="mob-light" src="images/icons/night.svg" class="top-align"/>
+						<a href="#" onclick="lights(this,'mobile','en');">Night</a>
+					</div>
+				</li>
+				<li>
 					<a href="https://chat.whatsapp.com/J0wNEiBtYGFCHqR7F6wKl5" target="_blank">
 						<img src="images/icons/whatsapp.png" class="social-icons" />
 					</a>&nbsp;
@@ -74,12 +84,14 @@
 			<span class="title-ta">வடகிழக்கு விஸ்கான்சின் தமிழ்ச்சங்கம்</span>
 			<span class="title-en">Northeast Wisconsin Tamil Sangam</span>
 			<div class="experiences">				
-				<img id="lang" src="images/icons/eng.svg" class="top-align"/>
-				<a href="index.html">English</a>&nbsp;
+				<img src="images/icons/eng.svg" class="top-align"/>
+				<a href="index.html">English</a>&nbsp;|&nbsp;
 				<img id="door" src="images/icons/outdoor.svg" class="top-align"/>
-				<a href="#" onclick="outDoors(this,'all','ta');">புறம்</a>&nbsp;
+				<a href="#" onclick="outDoors(this,'all','ta');">புறம்</a>&nbsp;|&nbsp;
 				<img id="light" src="images/icons/night.svg" class="top-align"/>
-				<a href="#" onclick="lights(this,'all','ta');">இரவு</a>
+				<a href="#" onclick="lights(this,'all','ta');">இரவு</a><!--&nbsp;|&nbsp;
+				<img id="wide" src="images/icons/wide.svg" class="top-align"/>
+				<a href="#" onclick="gowide(this,'all','ta');">திரை</a-->
 			</div>
 		</div>
 	</div>
@@ -418,9 +430,15 @@
 	</div>
 
 	<div class="footer">
-		&copy 2024 வடகிழக்கு விஸ்கான்சின் தமிழ் சங்கம் - அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை<br />		
-		பின்னணி மற்றும் நிகழ்வின் புகைப்படங்கள்: <a href="https://thecuriouseye.net/" target="#_new">PGSDEEPAKIMAGES</a><br />
-		இணையதள வடிவமைப்பு: <a href="https://www.onwardpath.com" target="#_new">Onwardpath</a>
+		<span class="opaque">
+			&copy 2024 வடகிழக்கு விஸ்கான்சின் தமிழ் சங்கம் - அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை
+		</span><br />
+		<span class="opaque">
+			பின்னணி மற்றும் நிகழ்வின் புகைப்படங்கள்: <a href="https://thecuriouseye.net/" target="#_new">PGS Deepak IMAGES</a>
+		</span><br />
+		<span class="opaque">
+			இணையதள வடிவமைப்பு: <a href="https://www.onwardpath.com" target="#_new">Onwardpath</a>
+		</span>
 	</div>
 
 	<button id="scrollBtn" onclick="scrollToTop()">

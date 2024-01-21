@@ -1,4 +1,11 @@
 ﻿/**
+ * Set defaults for the theme/experiences
+ */
+var dark = false;
+var outDoor = false;
+var wide = false;
+
+/**
  * When the user scrolls down 20px from the top of the document, show the button
  * Scroll to top when user clicks
  */
@@ -62,7 +69,6 @@ function mobMenuOnClick() {
 	document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
-var dark = false;
 /**
  * Handle Night/Day
  * @param {any} element
@@ -73,8 +79,13 @@ function lights(element, device, lang) {
 	dark = !dark;	
 	if (dark) {
 		/** Night Experience */
-		var icon = document.getElementById("light");
-		icon.src = "images/icons/day.svg";
+		if (device == 'mobile') {
+			var icon = document.getElementById("mob-light");
+			icon.src = "images/icons/day.svg";
+		} else {
+			var icon = document.getElementById("light");
+			icon.src = "images/icons/day.svg";
+		}		
 		if (lang == 'en') {
 			element.innerHTML = "Day";
 		} else {
@@ -86,6 +97,7 @@ function lights(element, device, lang) {
 			document.body.style.backgroundImage = "url('" + todaysBg + "')";
 			document.body.style.backgroundRepeat = "repeat";
 			document.body.style.backgroundAttachment = "fixed";
+			document.body.style.backgroundSize = "cover"; 
 		} else {
 			/*console.log("indoor & night");*/
 			document.body.style.backgroundColor = '#000000';
@@ -96,16 +108,17 @@ function lights(element, device, lang) {
 		const headerEls = document.getElementsByClassName("header");
 		for (let i = 0; i < headerEls.length; i++) {
 			headerEls[i].style.backgroundImage = "url('')";
-			headerEls[i].style.backgroundColor = "#000000";			
-			headerEls[i].style.color = "#AAFF00";
+			headerEls[i].style.backgroundColor = "#000000";
 		}
 		const titletaEls = document.getElementsByClassName("title-ta");
 		for (let i = 0; i < titletaEls.length; i++) {			
-			titletaEls[i].style.backgroundColor = "#000000";			
+			titletaEls[i].style.backgroundColor = "#000000";
+			titletaEls[i].style.color = "#ffffff";			
 		}
 		const titleenEls = document.getElementsByClassName("title-en");
 		for (let i = 0; i < titleenEls.length; i++) {
 			titleenEls[i].style.backgroundColor = "#000000";
+			titleenEls[i].style.color = "#ffffff";
 		}
 		/** Handle Desktop Menu elements */
 		document.getElementById("desktop-menu").style.backgroundColor = "#000000";
@@ -130,15 +143,9 @@ function lights(element, device, lang) {
 			sponsorEls[i].style.backgroundColor = "#000000";
 			sponsorEls[i].style.color = "#eeeeee";
 		}
-		const footerEls = document.getElementsByClassName("footer");
-		for (let i = 0; i < footerEls.length; i++) {
-		  	footerEls[i].style.backgroundColor = "#A9A9A9";
-		  	footerEls[i].style.color = "#ffffff";
-		}
 		const anchorEls = document.getElementsByTagName("a");
 		for (let i = 0; i < anchorEls.length; i++) {			
-			anchorEls[i].style.color = '#4169E1';//C3D9FF:gmail blue
-			
+			anchorEls[i].style.color = '#C3D9FF';//C3D9FF:gmail blue
 		}
 		const tableEls = document.getElementsByTagName("table");		
 		for (let i = 0; i < tableEls.length; i++) {			
@@ -159,6 +166,7 @@ function lights(element, device, lang) {
 			document.body.style.backgroundImage = "url('" + todaysBg + "')";
 			document.body.style.backgroundRepeat = "repeat";
 			document.body.style.backgroundAttachment = "fixed";
+			document.body.style.backgroundSize = "cover"; 
 		} else {
 			/*console.log("indoor & day");*/
 			document.body.style.backgroundColor = '#ffffff';
@@ -176,10 +184,12 @@ function lights(element, device, lang) {
 		const titletaEls = document.getElementsByClassName("title-ta");
 		for (let i = 0; i < titletaEls.length; i++) {
 			titletaEls[i].style.backgroundColor = "#f1f1f1";
+			titletaEls[i].style.color = "#006E2E";
 		}
 		const titleenEls = document.getElementsByClassName("title-en");
 		for (let i = 0; i < titleenEls.length; i++) {
 			titleenEls[i].style.backgroundColor = "#f1f1f1";
+			titleenEls[i].style.color = "#006E2E";
 		}
 		/**Handle Desktop Menu elements*/
 		document.getElementById("desktop-menu").style.backgroundColor = "#ffffff";
@@ -204,11 +214,6 @@ function lights(element, device, lang) {
 			sponsorEls[i].style.backgroundColor = "#ffffff";
 			sponsorEls[i].style.color = "#465945";
 		}
-		const footerEls = document.getElementsByClassName("footer");
-		for (let i = 0; i < footerEls.length; i++) {
-			footerEls[i].style.backgroundColor = "#EEEEEE";
-			footerEls[i].style.color = "#000000";
-		}
 		const anchorEls = document.getElementsByTagName("a");
 		for (let i = 0; i < anchorEls.length; i++) {
 			anchorEls[i].style.color = '#0000EE';//blue
@@ -220,9 +225,12 @@ function lights(element, device, lang) {
 		}		
 	}
 	restoreExperienceEls();
-	restoreMobileMenuEls();
+	if (device == 'mobile') {
+		restoreMobileMenuEls();
+		mobMenuOnClick();
+	}
 }
-var outDoor = false;
+
 /**
  * Handle Outdoor/Indoor
  * @param {any} element
@@ -244,6 +252,8 @@ function outDoors(element, device, lang) {
 		document.body.style.backgroundImage = "url('" + todaysBg +"')";	
 		document.body.style.backgroundRepeat = "repeat";
 		document.body.style.backgroundAttachment = "fixed";
+		document.body.style.backgroundSize = "cover"; 
+
 		/**Handle header*/
 		const headerEls = document.getElementsByClassName("header");		
 		for (let i = 0; i < headerEls.length; i++) {
@@ -283,11 +293,6 @@ function outDoors(element, device, lang) {
 			sponsorEls[i].style.backgroundColor = "#ffffff";
 			sponsorEls[i].style.color = "#465945";
 		}
-		const footerEls = document.getElementsByClassName("footer");
-		for (let i = 0; i < footerEls.length; i++) {
-			footerEls[i].style.backgroundColor = "#EEEEEE";
-			footerEls[i].style.color = "#000000";
-		}
 		const anchorEls = document.getElementsByTagName("a");
 		for (let i = 0; i < anchorEls.length; i++) {
 			anchorEls[i].style.color = '#0000EE';//blue
@@ -310,11 +315,32 @@ function outDoors(element, device, lang) {
 			document.body.style.backgroundColor = '#000000';
 			document.body.style.color = '#ffffff';
 			document.body.style.backgroundImage = "url('')";
+			const titletaEls = document.getElementsByClassName("title-ta");
+			for (let i = 0; i < titletaEls.length; i++) {			
+				titletaEls[i].style.backgroundColor = "#000000";
+				titletaEls[i].style.color = "#ffffff";			
+			}
+			const titleenEls = document.getElementsByClassName("title-en");
+			for (let i = 0; i < titleenEls.length; i++) {
+				titleenEls[i].style.backgroundColor = "#000000";
+				titleenEls[i].style.color = "#ffffff";
+			}
 		} else {
 			/*console.log("day & indoor");*/
 			document.body.style.backgroundColor = '#ffffff';
 			document.body.style.color = '#000000';
-			document.body.style.backgroundImage = "url('')";	
+			document.body.style.backgroundImage = "url('')";
+
+			const titletaEls = document.getElementsByClassName("title-ta");
+			for (let i = 0; i < titletaEls.length; i++) {
+				titletaEls[i].style.backgroundColor = "#f1f1f1";
+				headerEls[i].style.color = "#006E2E";
+			}
+			const titleenEls = document.getElementsByClassName("title-en");
+			for (let i = 0; i < titleenEls.length; i++) {
+				titleenEls[i].style.backgroundColor = "#f1f1f1";
+				headerEls[i].style.color = "#006E2E";
+			}
 		}
 		document.body.style.backgroundImage = "url('')";
 		/**Handle header*/
@@ -325,14 +351,7 @@ function outDoors(element, device, lang) {
 			headerEls[i].style.backgroundColor = "#f1f1f1";
 			headerEls[i].style.color = "#006E2E";
 		}
-		const titletaEls = document.getElementsByClassName("title-ta");
-		for (let i = 0; i < titletaEls.length; i++) {
-			titletaEls[i].style.backgroundColor = "#f1f1f1";
-		}
-		const titleenEls = document.getElementsByClassName("title-en");
-		for (let i = 0; i < titleenEls.length; i++) {
-			titleenEls[i].style.backgroundColor = "#f1f1f1";
-		}
+		
 		/**Handle Desktop Menu elements*/
 		document.getElementById("desktop-menu").style.backgroundColor = "#ffffff";
 		document.getElementById("desktop-menu").style.opacity = "1";
@@ -355,12 +374,7 @@ function outDoors(element, device, lang) {
 		for (let i = 0; i < sponsorEls.length; i++) {
 			sponsorEls[i].style.backgroundColor = "#ffffff";
 			sponsorEls[i].style.color = "#465945";
-		}
-		const footerEls = document.getElementsByClassName("footer");
-		for (let i = 0; i < footerEls.length; i++) {
-			footerEls[i].style.backgroundColor = "#EEEEEE";
-			footerEls[i].style.color = "#000000";
-		}
+		}		
 		const anchorEls = document.getElementsByTagName("a");
 		for (let i = 0; i < anchorEls.length; i++) {
 			anchorEls[i].style.color = '#0000EE';//blue
@@ -372,7 +386,38 @@ function outDoors(element, device, lang) {
 		}
 	}
 	restoreExperienceEls();
-	restoreMobileMenuEls();	
+	if (device == 'mobile') {
+		restoreMobileMenuEls();
+		mobMenuOnClick();
+	}	
+}
+
+function gowide (element, device, lang) {
+	console.log("wide mode");
+	wide = !wide;
+	if (wide) {
+		document.getElementById("wide").src="images/icons/narrow.svg";
+		if (lang == 'en') {
+			element.innerHTML = "Boxed";
+		} else {
+			element.innerHTML = "பெட்டி";//பரந்த, குறுகிய
+		}
+		const wrapperEls = document.getElementsByClassName("wrapper");
+		for (let i = 0; i < wrapperEls.length; i++) {
+			wrapperEls[i].style.width = "100%";
+		}
+	} else {
+		document.getElementById("wide").src="images/icons/wide.svg";
+		if (lang == 'en') {
+			element.innerHTML = "Movie";
+		} else {
+			element.innerHTML = "திரை";//பரந்த, குறுகிய
+		}
+		const wrapperEls = document.getElementsByClassName("wrapper");
+		for (let i = 0; i < wrapperEls.length; i++) {
+			wrapperEls[i].style.width = "65%";
+		}
+	}	
 }
 /**
  * Restore Experience elements (should always look the same) 
@@ -418,22 +463,28 @@ function restoreMobileMenuEls() {
  * Give a background image
  */
 function getBgImageUrl(dark, outDoor) {
-	let num = randomNumber(1, 7);
-	var imageUrl = "images/bg/day-1.jpg";
+	var totalDayImages = 9;
+	var totalNightImages = 7;
+    var fileFormat = ".jpeg";
+	var imageUrl = "";
 	if (dark) {
 		/** Night */
+		imageUrl = "images/bg/night-1-min.jpeg";//default image
+		let num = randomNumber(1, totalNightImages);
 		if (outDoor) {
 			/*console.log("outdoor & night");*/
-			imageUrl = "images/bg/night-" + num + ".jpg";
+			imageUrl = "images/bg/night-" + num +"-min"+ fileFormat;
 		} else {
 			/*console.log("indoor & night");*/
 			imageUrl = '';
 		}
 	} else {
 		/** Day */
+		imageUrl = "images/bg/day-1.jpeg";//default image
+		let num = randomNumber(1, totalDayImages);
 		if (outDoor) {
 			/*console.log("outdoor & day");*/
-			imageUrl = "images/bg/day-" + num + ".jpg";			
+			imageUrl = "images/bg/day-" + num +"-min"+ fileFormat;			
 		} else {
 			/*console.log("indoor & day");*/
 			imageUrl = '';

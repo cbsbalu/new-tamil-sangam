@@ -1,11 +1,4 @@
 ﻿/**
- * Set defaults for the theme/experiences
- */
-var dark = false;
-var outDoor = false;
-var wide = false;
-
-/**
  * When the user scrolls down 20px from the top of the document, show the button
  * Scroll to top when user clicks
  */
@@ -69,6 +62,7 @@ function mobMenuOnClick() {
 	document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
+var dark = false;
 /**
  * Handle Night/Day
  * @param {any} element
@@ -79,13 +73,12 @@ function lights(element, device, lang) {
 	dark = !dark;	
 	if (dark) {
 		/** Night Experience */
-		if (device == 'mobile') {
-			var icon = document.getElementById("mob-light");
-			icon.src = "images/icons/day.svg";
+		if (device == "mobile") {
+			document.getElementById("mob-light").src = "images/icons/day.svg";
 		} else {
-			var icon = document.getElementById("light");
-			icon.src = "images/icons/day.svg";
-		}		
+			document.getElementById("light").src = "images/icons/day.svg";
+		}
+		
 		if (lang == 'en') {
 			element.innerHTML = "Day";
 		} else {
@@ -108,17 +101,16 @@ function lights(element, device, lang) {
 		const headerEls = document.getElementsByClassName("header");
 		for (let i = 0; i < headerEls.length; i++) {
 			headerEls[i].style.backgroundImage = "url('')";
-			headerEls[i].style.backgroundColor = "#000000";
+			headerEls[i].style.backgroundColor = "#000000";			
+			headerEls[i].style.color = "#AAFF00";
 		}
 		const titletaEls = document.getElementsByClassName("title-ta");
 		for (let i = 0; i < titletaEls.length; i++) {			
-			titletaEls[i].style.backgroundColor = "#000000";
-			titletaEls[i].style.color = "#ffffff";			
+			titletaEls[i].style.backgroundColor = "#000000";			
 		}
 		const titleenEls = document.getElementsByClassName("title-en");
 		for (let i = 0; i < titleenEls.length; i++) {
 			titleenEls[i].style.backgroundColor = "#000000";
-			titleenEls[i].style.color = "#ffffff";
 		}
 		/** Handle Desktop Menu elements */
 		document.getElementById("desktop-menu").style.backgroundColor = "#000000";
@@ -145,7 +137,8 @@ function lights(element, device, lang) {
 		}
 		const anchorEls = document.getElementsByTagName("a");
 		for (let i = 0; i < anchorEls.length; i++) {			
-			anchorEls[i].style.color = '#C3D9FF';//C3D9FF:gmail blue
+			anchorEls[i].style.color = '#4169E1';//C3D9FF:gmail blue
+			
 		}
 		const tableEls = document.getElementsByTagName("table");		
 		for (let i = 0; i < tableEls.length; i++) {			
@@ -153,7 +146,13 @@ function lights(element, device, lang) {
 			tableEls[i].children[0].children[0].children[1].style.backgroundColor = "#A9A9A9";
 		}
 	} else {
-		document.getElementById("light").src="images/icons/night.svg";
+
+		if (device == "mobile") {
+			document.getElementById("mob-light").src = "images/icons/night.svg";
+		} else {
+			document.getElementById("light").src = "images/icons/night.svg";
+		}
+
 		/** Day Experience **/
 		if (lang == 'en') {
 			element.innerHTML = "Night";
@@ -184,12 +183,10 @@ function lights(element, device, lang) {
 		const titletaEls = document.getElementsByClassName("title-ta");
 		for (let i = 0; i < titletaEls.length; i++) {
 			titletaEls[i].style.backgroundColor = "#f1f1f1";
-			titletaEls[i].style.color = "#006E2E";
 		}
 		const titleenEls = document.getElementsByClassName("title-en");
 		for (let i = 0; i < titleenEls.length; i++) {
 			titleenEls[i].style.backgroundColor = "#f1f1f1";
-			titleenEls[i].style.color = "#006E2E";
 		}
 		/**Handle Desktop Menu elements*/
 		document.getElementById("desktop-menu").style.backgroundColor = "#ffffff";
@@ -224,13 +221,14 @@ function lights(element, device, lang) {
 			tableEls[i].children[0].children[0].children[1].style.backgroundColor = "#EEEEEE";
 		}		
 	}
-	restoreExperienceEls();
-	if (device == 'mobile') {
+	if (device == "mobile") {
 		restoreMobileMenuEls();
 		mobMenuOnClick();
+	} else {
+		restoreExperienceEls();
 	}
 }
-
+var outDoor = false;
 /**
  * Handle Outdoor/Indoor
  * @param {any} element
@@ -315,32 +313,11 @@ function outDoors(element, device, lang) {
 			document.body.style.backgroundColor = '#000000';
 			document.body.style.color = '#ffffff';
 			document.body.style.backgroundImage = "url('')";
-			const titletaEls = document.getElementsByClassName("title-ta");
-			for (let i = 0; i < titletaEls.length; i++) {			
-				titletaEls[i].style.backgroundColor = "#000000";
-				titletaEls[i].style.color = "#ffffff";			
-			}
-			const titleenEls = document.getElementsByClassName("title-en");
-			for (let i = 0; i < titleenEls.length; i++) {
-				titleenEls[i].style.backgroundColor = "#000000";
-				titleenEls[i].style.color = "#ffffff";
-			}
 		} else {
 			/*console.log("day & indoor");*/
 			document.body.style.backgroundColor = '#ffffff';
 			document.body.style.color = '#000000';
-			document.body.style.backgroundImage = "url('')";
-
-			const titletaEls = document.getElementsByClassName("title-ta");
-			for (let i = 0; i < titletaEls.length; i++) {
-				titletaEls[i].style.backgroundColor = "#f1f1f1";
-				headerEls[i].style.color = "#006E2E";
-			}
-			const titleenEls = document.getElementsByClassName("title-en");
-			for (let i = 0; i < titleenEls.length; i++) {
-				titleenEls[i].style.backgroundColor = "#f1f1f1";
-				headerEls[i].style.color = "#006E2E";
-			}
+			document.body.style.backgroundImage = "url('')";	
 		}
 		document.body.style.backgroundImage = "url('')";
 		/**Handle header*/
@@ -351,7 +328,14 @@ function outDoors(element, device, lang) {
 			headerEls[i].style.backgroundColor = "#f1f1f1";
 			headerEls[i].style.color = "#006E2E";
 		}
-		
+		const titletaEls = document.getElementsByClassName("title-ta");
+		for (let i = 0; i < titletaEls.length; i++) {
+			titletaEls[i].style.backgroundColor = "#f1f1f1";
+		}
+		const titleenEls = document.getElementsByClassName("title-en");
+		for (let i = 0; i < titleenEls.length; i++) {
+			titleenEls[i].style.backgroundColor = "#f1f1f1";
+		}
 		/**Handle Desktop Menu elements*/
 		document.getElementById("desktop-menu").style.backgroundColor = "#ffffff";
 		document.getElementById("desktop-menu").style.opacity = "1";
@@ -374,7 +358,8 @@ function outDoors(element, device, lang) {
 		for (let i = 0; i < sponsorEls.length; i++) {
 			sponsorEls[i].style.backgroundColor = "#ffffff";
 			sponsorEls[i].style.color = "#465945";
-		}		
+		}
+		
 		const anchorEls = document.getElementsByTagName("a");
 		for (let i = 0; i < anchorEls.length; i++) {
 			anchorEls[i].style.color = '#0000EE';//blue
@@ -385,38 +370,11 @@ function outDoors(element, device, lang) {
 			tableEls[i].children[0].children[0].children[1].style.backgroundColor = "#EEEEEE";
 		}
 	}
-	restoreExperienceEls();
-	if (device == 'mobile') {
+	if (device == "mobile") {
 		restoreMobileMenuEls();
 		mobMenuOnClick();
-	}	
-}
-
-function gowide (element, device, lang) {
-	console.log("wide mode");
-	wide = !wide;
-	if (wide) {
-		document.getElementById("wide").src="images/icons/narrow.svg";
-		if (lang == 'en') {
-			element.innerHTML = "Boxed";
-		} else {
-			element.innerHTML = "பெட்டி";//பரந்த, குறுகிய
-		}
-		const wrapperEls = document.getElementsByClassName("wrapper");
-		for (let i = 0; i < wrapperEls.length; i++) {
-			wrapperEls[i].style.width = "100%";
-		}
 	} else {
-		document.getElementById("wide").src="images/icons/wide.svg";
-		if (lang == 'en') {
-			element.innerHTML = "Movie";
-		} else {
-			element.innerHTML = "திரை";//பரந்த, குறுகிய
-		}
-		const wrapperEls = document.getElementsByClassName("wrapper");
-		for (let i = 0; i < wrapperEls.length; i++) {
-			wrapperEls[i].style.width = "65%";
-		}
+		restoreExperienceEls();
 	}	
 }
 /**

@@ -54,7 +54,7 @@ function scrollToTop() {
  * @param {any} section
  */
 function navigateTo(device, section) {
-	const sections = ["home","member","sponsor","contact","directory"];    
+	const sections = ["home","member","sponsor","contact","directory", "eventtickets"];    
 	for (let i = 0; i < sections.length; i++) {
 		if (section == sections[i]) {
 			document.getElementById(section).style.display = "block"; 
